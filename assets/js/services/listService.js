@@ -3,7 +3,7 @@
 			.factory('listService', ['$http', function($http) {
 				function getTodos() {
 					var todos = [];
-					return $http.get('/assets/js/todos.json')
+					return $http.get('todo/assets/js/todos.json')
 						 .then(function(response){
 						 	return response.data;
 						 });
