@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+<head>
+      <base href="/" />
+      <title>Todo List</title>
+      <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <meta charset="UTF-8">
+      <meta https-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width,initial-scale=1 , maximum-scale=1 , user-scalable=no">
+      <meta name="theme-color" content="#2D2D31">
+      <meta name="apple-mobile-web-app-status-bar-style" content="#3A474F">
+
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900|Open+Sans:300,400,600,700,800" rel="stylesheet">
+      <!-- Angular Material style sheet -->
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <!-- My Stylesheets -->
+      <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+</head>
+
+
+<body ng-cloak>
+<div style="width:100%" class="ng-cloak">
+  <ui-view></ui-view>
+</div>
+      
+    
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <!-- Angular.js Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js" integrity="sha256-FMocp8pp1WruAK6GtjNDtuGAALCt/dCsVtw7oSjvPX0=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <!-- Angular Material Library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+  <!-- application bootstrap  -->
+  <script src="assets/js/app.js"></script>
+  <!-- controllers -->
+  <script src="assets/js/controllers/mainCtrl.js"></script>
+  <script src="assets/js/services/listService.js"></script>
+</body>
+</html>

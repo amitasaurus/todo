@@ -1,0 +1,49 @@
+  <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <h2 flex md-truncate>{{greeting}} Amit</h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="More">
+          <md-icon class="material-icon">power_settings_new</md-icon>
+        </md-button>
+      </div>
+  </md-toolbar>
+<md-content layout="row" layout-align="center center" class="todo-container">
+<div flex-xs flex-gt-xs="70" flex-gt-md="50" layout="column">
+   <md-card>
+      <div class="banner" id="{{time}}"></div>
+      <md-card-title>
+         <md-card-title-text layout="row" style="padding: 0px 16px;">
+            <h1 class="title">To-do</h1>
+            <span flex></span>
+            <p class="muted">{{date}}</p>
+         </md-card-title-text>
+      </md-card-title>
+      <md-divider></md-divider>
+      <md-card-content>
+         <md-list flex>
+           <md-list-item ng-repeat="todo in todos track by $index">
+               <md-checkbox ng-checked="todo.status === 'completed'" ng-disabled="todo.status === 'completed'" ng-click="complete($index)"></md-checkbox>
+               <p class="{{todo.status}} no-flex">{{todo.task}}</p>
+               <span class="priority" id="{{todo.priority}}">{{todo.priority}}</span>
+               <span flex></span>
+               <span flex></span>
+               <p class="numDays no-flex">{{todo.timestamp | days}}</p>
+               <div layout="row">
+                  <md-button class="md-icon-button" aria-label="Edit" ng-click="edit($event,$index)" ng-hide="todo.status === 'completed'">
+                     <md-icon class="material-icon edit">edit</md-icon>
+                  </md-button>
+                  <md-button class="md-icon-button" aria-label="Delete" ng-click="delete($index)">
+                     <md-icon class="material-icon delete">delete</md-icon>
+                  </md-button>
+               </div>
+            </md-list-item>
+
+         </md-list>
+      </md-card-content>
+   </md-card>
+</div>
+<md-content>
+
+<md-button class="md-fab" aria-label="add note" id="fab-add" ng-click="add($event)">
+    <md-icon class="material-icon">add</md-icon>
+</md-button>
