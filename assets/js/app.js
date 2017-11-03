@@ -6,7 +6,7 @@
       $stateProvider
         .state('/', {
           url: '/',
-          templateUrl: 'assets/views/dashboard.html',
+          templateUrl: 'todo/assets/views/dashboard.html',
           controller: 'mainCtrl'
         });
 

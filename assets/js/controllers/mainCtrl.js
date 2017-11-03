@@ -38,7 +38,7 @@
 			$scope.add = function(ev) {
 				$mdDialog.show({
 					controller: addNoteController,
-					templateUrl: 'assets/views/addNote.html',
+					templateUrl: 'todo/assets/views/addNote.html',
 					parent: angular.element(document.body),
 					targetEvent: ev,
 					clickOutsideToClose: true
@@ -61,7 +61,7 @@
 				$rootScope.index = i;
 				$mdDialog.show({
 					controller: editNoteController,
-					templateUrl: 'assets/views/editNote.html',
+					templateUrl: 'todo/assets/views/editNote.html',
 					parent: angular.element(document.body),
 					targetEvent: ev,
 					clickOutsideToClose: true
